@@ -41,7 +41,7 @@ request.addEventListener('readystatechange', () => {
     }
 }); 
 
-request.open('GET', "http://jsonplaceholder.typicode.com/todos");
+request.open('GET', "https://jsonplaceholder.typicode.com/todos/1");
 request.sent();
 
 
@@ -57,7 +57,7 @@ const getTodos = (callback) => {
             callback('could not fetch data', undefined);
         }
     });
-    request.open('GET', "http://jsonplaceholder.typicode.com/todos")
+    request.open('GET', "https://jsonplaceholder.typicode.com/todos/1")
     request.send();
 }
 getTodos((err, data) => {
@@ -82,7 +82,7 @@ const getTodos = () => {
                 callback('could not fetch data', undefined);
             }
         });
-        request.open('GET', "todos/todos1.json");
+        request.open('GET', "https://jsonplaceholder.typicode.com/todos/1");
         request.send();
     });
  }
